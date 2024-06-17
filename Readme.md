@@ -12,14 +12,14 @@ Das Erstellen geschieht über die Developers Seite von Discord https://discordap
 
 Der Bot benötigt NUR folgende Rechte
 
-![](Screenshots\BotPermissions.png)
+![](Screenshots/BotPermissions.png)
 
 !! WICHTIG !! Damit der Bot auch den Inhalt der Chatmeldungen lesen darf muss noch folgende Einstellung "MESSAGE CONTENT INTENT" erlaubt werden
-![](Screenshots\BotMessageContent.png)
+![](Screenshots/BotMessageContent.png)
 
 Auch sollte der Bot in den Servereinstellungen auf die Kanäle beschränkt werden welche er benötigt. Hier z.B. 
 
-![](Screenshots\DiscordChannelsAccess.png)
+![](Screenshots/DiscordChannelsAccess.png)
 für die Kanäle welche in der Konfiguration der Mod im Savegame hinterlegt sind
 
 ```
@@ -61,10 +61,10 @@ Kanals ein welcher für die Chats, welche aus dem Spiel gesendet werden, benöti
 Für die Admin und Fraktionschats gilt:
 
 Man muss InGame ein Chat über den globalen Kanal machen damit die Mod den Spieler kennt
-![](Screenshots\InitChatMod.png)
+![](Screenshots/InitChatMod.png)
 und danach über den jeweiligen Discord Kanal einen Chat absetzten damit die Mod die benötigte ID ermitteln kann.
-![](Screenshots\InitBackChatDiscord.png)
-![](Screenshots\InitBackChatMod.png)
+![](Screenshots/InitBackChatDiscord.png)
+![](Screenshots/InitBackChatMod.png)
 
 Nun ist die Discord Bridge vollständig eingerichtet und kann verwendet werden.
 
@@ -81,7 +81,7 @@ Nun ist die Discord Bridge vollständig eingerichtet und kann verwendet werden.
 ## InGame Empyrion
 Über den Chat in Empyrion kann der Status der Kanäle und ob sie eingerichtet sind, ermittelt werden 
 - **\discord help**\
-  ![](Screenshots\Help.png)
+  ![](Screenshots/Help.png)
 
 ## Konfiguration
 - **LogLevel:** Debug,**Message**,Error
@@ -111,14 +111,14 @@ It is created via the developers page of Discord https://discordapp.com/develope
 
 The bot ONLY needs the following rights
 
-![](Screenshots\BotPermissions.png)
+![](Screenshots/BotPermissions.png)
 
 !! IMPORTANT !! So that the bot can also read the content of the chat messages, the following setting "MESSAGE CONTENT INTENT" must be allowed
-![](Screenshots\BotMessageContent.png)
+![](Screenshots/BotMessageContent.png)
 
 The bot should also be restricted to the channels it needs in the server settings. Here, for example
 
-![](Screenshots\DiscordChannelsAccess.png)
+![](Screenshots/DiscordChannelsAccess.png)
 for the channels that are stored in the mod configuration in the savegame
 
 ```
@@ -159,10 +159,10 @@ To set up the global chat, you simply need to send a chat via the Discord channe
 The following applies to the admin and faction chats:
 
 You need to send a chat in-game via the global channel so that the mod knows the player
-![](Screenshots\InitChatMod.png)
+![](Screenshots/InitChatMod.png)
 and then send a chat via the respective Discord channel so that the mod can determine the required ID.
-![](Screenshots\InitBackChatDiscord.png)
-![](Screenshots\InitBackChatMod.png)
+![](Screenshots/InitBackChatDiscord.png)
+![](Screenshots/InitBackChatMod.png)
 
 The Discord Bridge is now fully set up and can be used.
 
@@ -177,7 +177,7 @@ Only members of the faction should have access to this channel
 The status of the channels and whether they are set up can be determined via the chat in Empyrion
 
 - **\discord help**\
-![](Screenshots\Help.png)
+![](Screenshots/Help.png)
 
 ## Configuration
 - **LogLevel:** Debug,**Message**,Error
