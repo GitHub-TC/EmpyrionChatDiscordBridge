@@ -145,7 +145,7 @@ namespace EmpyrionChatDiscordBridge
 
             if (!Configuration.Current.PlayerCacheByName.TryGetValue(arg.Author.GlobalName, out var player) && !Configuration.Current.PlayerCacheByName.TryGetValue(arg.Author.Username, out player)) return;
 
-            if (arg.Channel.Name == Configuration.Current.GlobalChannel.DiscordChannelName)
+            if (arg.Channel.Name == Configuration.Current.GlobalChannel.DiscordChannelName || arg.Channel.Id == Configuration.Current.GlobalChannel.ID)
             {
                 if (Configuration.Current.GlobalChannel.ID != arg.Channel.Id)
                 {
@@ -161,7 +161,7 @@ namespace EmpyrionChatDiscordBridge
                     Text               = arg.Content,
                 });
             }
-            else if (arg.Channel.Name == Configuration.Current.AdminChannel.DiscordChannelName)
+            else if (arg.Channel.Name == Configuration.Current.AdminChannel.DiscordChannelName || arg.Channel.Id == Configuration.Current.AdminChannel.ID)
             {
                 if (Configuration.Current.AdminChannel.ID != arg.Channel.Id)
                 {
@@ -195,7 +195,7 @@ namespace EmpyrionChatDiscordBridge
             }
             else
             {
-                var channel = Configuration.Current.FractionChannels.FirstOrDefault(C => C.DiscordChannelName == arg.Channel.Name);
+                var channel = Configuration.Current.FractionChannels.FirstOrDefault(C => C.DiscordChannelName == arg.Channel.Name || C.ID == arg.Channel.Id);
 
                 if(channel == null)
                 {
