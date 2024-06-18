@@ -126,12 +126,12 @@ namespace EmpyrionChatDiscordBridge
                 if (channel == null) Log($"No fraction channel found for {fraction.abbrev}", LogLevel.Debug);
             }
 
-            await channel?.SendMessageAsync($"{player.Name}:{msg.msg}");
+            await channel?.SendMessageAsync($"{player.Name}: {msg.msg}");
 
             if (Configuration.Current.AdminChannel.ID != 0)
             {
                 channel = await DiscordClient.GetChannelAsync(Configuration.Current.AdminChannel?.ID ?? 0) as SocketTextChannel;
-                await channel?.SendMessageAsync($"{player.Name}:[{fraction.abbrev}]:{msg.msg}");
+                await channel?.SendMessageAsync($"{player.Name} [{fraction.abbrev}: {msg.msg}");
             }
         }
 
