@@ -39,6 +39,8 @@ namespace EmpyrionChatDiscordBridge
         ConcurrentDictionary<int, ChatPlayerInfo> PlayerCacheById { get; } = new ConcurrentDictionary<int, ChatPlayerInfo>();
         public bool DiscordClientDisconnected { get; private set; }
 
+        string LastMessage { get; set; }
+
         public override void Initialize(ModGameAPI dediAPI)
         {
             DediAPI = dediAPI;
@@ -142,6 +144,9 @@ namespace EmpyrionChatDiscordBridge
             if(DiscordClientDisconnected) await InitDiscordConnection();
 
             Log($"MSG:{arg.Author.GlobalName}/{arg.Author.Username} {arg.Channel} {arg.Content}", LogLevel.Debug);
+
+            if (LastMessage == arg.Content) return;
+            LastMessage = arg.Content;
 
             if (!Configuration.Current.PlayerCacheByName.TryGetValue(arg.Author.GlobalName, out var player) && !Configuration.Current.PlayerCacheByName.TryGetValue(arg.Author.Username, out player)) return;
 
